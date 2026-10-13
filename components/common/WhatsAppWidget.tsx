@@ -41,7 +41,10 @@ export function WhatsAppWidget() {
   };
 
   return (
-    <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex flex-col items-end">
+    <div
+      id="floating-whatsapp-widget"
+      className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex flex-col items-end"
+    >
       {/* Dialog box popover when open */}
       {isOpen && (
         <div className="mb-3 w-[calc(100vw-2rem)] sm:w-[380px] max-w-[380px] bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-200">

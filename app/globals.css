@@ -70,3 +70,9 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #94A3B8;
 }
+
+/* Hide floating WhatsApp widget when mobile navigation drawer is open to avoid overlay collision */
+body[data-mobile-menu-open="true"] #floating-whatsapp-widget {
+  display: none !important;
+}
+

@@ -27,6 +27,18 @@ export default function ClientLayout({
     setMobileSidebarOpen((prev) => !prev);
   };
 
+  React.useEffect(() => {
+    if (mobileSidebarOpen) {
+      document.body.setAttribute("data-mobile-menu-open", "true");
+    } else {
+      document.body.removeAttribute("data-mobile-menu-open");
+    }
+    return () => {
+      document.body.removeAttribute("data-mobile-menu-open");
+    };
+  }, [mobileSidebarOpen]);
+
+
   return (
     <ClientSidebarContext.Provider
       value={{

@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { AppProvider } from "@/context/app-store";
+import { WhatsAppWidget } from "@/components/common/WhatsAppWidget";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -32,8 +33,12 @@ export default function RootLayout({
   return (
     <html lang="fr" className="h-full">
       <body className="min-h-full flex flex-col bg-[#F7F8FA] text-[#172B4D] antialiased">
-        <AppProvider>{children}</AppProvider>
+        <AppProvider>
+          {children}
+          <WhatsAppWidget />
+        </AppProvider>
       </body>
     </html>
   );
 }
+

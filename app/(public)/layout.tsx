@@ -1,7 +1,6 @@
 import React, { Suspense } from "react";
 import { Navbar } from "@/components/common/Navbar";
 import { Footer } from "@/components/common/Footer";
-import { WhatsAppWidget } from "@/components/common/WhatsAppWidget";
 
 export default function PublicLayout({
   children,
@@ -15,7 +14,7 @@ export default function PublicLayout({
       </Suspense>
       <main className="flex-1">{children}</main>
       <Footer />
-      <WhatsAppWidget />
     </div>
   );
 }
+
